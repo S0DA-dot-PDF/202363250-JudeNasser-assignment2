@@ -52,10 +52,10 @@
    
         
 
-        
         <footer>
-            <h2>Contact Me !</h2>
-            <form method="post">
+            <h2>Contact Me!</h2>
+
+            <form id="contactForm" novalidate>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -68,9 +68,21 @@
                 <button type="submit">Submit</button>
             </form>
 
-            <button id="themeToggle" aria-pressed="false">Night mode</button>
+            <p id="greetingMessage" aria-live="polite"></p>
+            <p id="errorMessage" aria-live="polite"></p>
 
+            <button id="themeToggle" aria-pressed="false">Night mode</button>
         </footer>
+
+
+
+
+
+
+
+
+
+        
 
     <script src="js/script.js" defer></script>
     </body>
