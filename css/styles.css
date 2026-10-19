@@ -4,6 +4,8 @@
 :root {
   --ink:    #242220;   /* body text soft black, not pure  */
   --paper:  #faf7f2;   /* card / box background */
+  --invpaper: #271d23; 
+  --invink: #f2e7ec;
   --shell:  #f0ece6;   /* page background */
   --accent: #7a5c3e;   /* borders, links, ornament */
   --muted:  #8a8279;   /* captions, secondary text */
@@ -14,6 +16,8 @@
 [data-theme="dark"] {
   --ink:    #f2e7ec;
   --paper:  #271d23;
+  --invpaper:  #faf7f2;   /* card / box background */
+  --invink: #242220;
   --shell:  #1b1418;
   --accent: #d99ab0;
   --muted:  #a8949c;
@@ -84,6 +88,29 @@ header {
   border: 4px solid var(--accent);
   border-radius: 10px;
   background-color: var(--paper);
+  color: var(--ink);
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+.projectsCard:hover {
+  background-color: var(--invpaper);
+  color: var(--invink);
+}
+
+.projectsCard h2,
+.projectsCard p,
+.projectsCard a {
+  transition: color 0.3s ease;
+}
+
+.projectsCard:hover h2,
+.projectsCard:hover p,
+.projectsCard:hover a {
+  color: var(--invink);
+  transition: color 0.3s ease;
 }
 
 /* both images same shape, contain so nothing gets cut off */
